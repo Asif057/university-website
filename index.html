@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Premium Navbar</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary-color: #0A0A0A;
+  --accent-color: #FF6F61;
+  --bg-color: #FFFFFF;
+  --nav-height: 80px;
+  --transition: 0.3s ease;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Roboto', sans-serif; background: var(--bg-color); }
+nav {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: var(--primary-color);
+  color: #fff;
+}
+nav .logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+nav .nav-links {
+  list-style:none;
+  display:flex;
+  gap:2rem;
+}
+nav .nav-links a {
+  position:relative;
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+  transition: var(--transition);
+}
+nav .nav-links a::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background: var(--accent-color);
+  transition: width var(--transition);
+}
+nav .nav-links a:hover::after {
+  width:100%;
+}
+nav .cta {
+  background: var(--accent-color);
+  color:#fff;
+  border:none;
+  padding:0.6rem 1.4rem;
+  border-radius:4px;
+  font-family:'Poppins',sans-serif;
+  font-weight:600;
+  cursor:pointer;
+  transition: background var(--transition);
+}
+nav .cta:hover {
+  background:#e65b50;
+}
+nav:hover {
+  background: #111;
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Brand</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <button class="cta">Get Started</button>
+</nav>
+</body>
+</html>
