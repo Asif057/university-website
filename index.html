@@ -1,87 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Premium Navbar</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
-<style>
-:root {
-  --primary-color: #0A0A0A;
-  --accent-color: #FF6F61;
-  --bg-color: #FFFFFF;
-  --nav-height: 80px;
-  --transition: 0.3s ease;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Roboto', sans-serif; background: var(--bg-color); }
-nav {
-  height: var(--nav-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  background: var(--primary-color);
-  color: #fff;
-}
-nav .logo {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-nav .nav-links {
-  list-style:none;
-  display:flex;
-  gap:2rem;
-}
-nav .nav-links a {
-  position:relative;
-  color:#fff;
-  text-decoration:none;
-  font-weight:500;
-  transition: var(--transition);
-}
-nav .nav-links a::after {
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0;
-  height:2px;
-  background: var(--accent-color);
-  transition: width var(--transition);
-}
-nav .nav-links a:hover::after {
-  width:100%;
-}
-nav .cta {
-  background: var(--accent-color);
-  color:#fff;
-  border:none;
-  padding:0.6rem 1.4rem;
-  border-radius:4px;
-  font-family:'Poppins',sans-serif;
-  font-weight:600;
-  cursor:pointer;
-  transition: background var(--transition);
-}
-nav .cta:hover {
-  background:#e65b50;
-}
-nav:hover {
-  background: #111;
-}
-</style>
-</head>
-<body>
-<nav>
-  <div class="logo">Brand</div>
-  <ul class="nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Features</a></li>
-    <li><a href="#">Pricing</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-  <button class="cta">Get Started</button>
-</nav>
-</body>
-</html>
+[
+  {
+    "file_path": "index.html",
+    "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>University Website</title>\n  <link rel=\"stylesheet\" href=\"css/footer.css\">\n</head>\n<body>\n  <!-- Main content of the site would go here -->\n\n  <footer class=\"site-footer\">\n    <div class=\"footer-container\">\n      <nav class=\"footer-nav\">\n        <h2 class=\"footer-title\">Quick Links</h2>\n        <ul>\n          <li><a href=\"#\">Admissions</a></li>\n          <li><a href=\"#\">Academics</a></li>\n          <li><a href=\"#\">Research</a></li>\n          <li><a href=\"#\">Alumni</a></li>\n        </ul>\n      </nav>\n\n      <section class=\"footer-contact\">\n        <h2 class=\"footer-title\">Contact Us</h2>\n        <address>\n          123 University Ave<br>\n          City, State ZIP<br>\n          <a href=\"tel:+1234567890\">+1 (234) 567‑890</a><br>\n          <a href=\"mailto:info@university.edu\">info@university.edu</a>\n        </address>\n      </section>\n\n      <section class=\"footer-social\">\n        <h2 class=\"footer-title\">Follow Us</h2>\n        <ul class=\"social-list\">\n          <li><a href=\"#\" aria-label=\"Facebook\">F</a></li>\n          <li><a href=\"#\" aria-label=\"Twitter\">T</a></li>\n          <li><a href=\"#\" aria-label=\"Instagram\">I</a></li>\n          <li><a href=\"#\" aria-label=\"LinkedIn\">L</a></li>\n        </ul>\n      </section>\n    </div>\n    <div class=\"footer-bottom\">\n      <p>&copy; 2026 University Name. All rights reserved.</p>\n    </div>\n  </footer>\n</body>\n</html>"
+  },
+  {
+    "file_path": "css/footer.css",
+    "code": ":root {\n  --footer-bg: #2c3e50;\n  --footer-text: #ecf0f1;\n  --footer-link: #1abc9c;\n  --footer-link-hover: #16a085;\n}\n\n.site-footer {\n  background: var(--footer-bg);\n  color: var(--footer-text);\n  font-family: Arial, Helvetica, sans-serif;\n  padding: 2rem 1rem;\n}\n\n.footer-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n\n.footer-nav,\n.footer-contact,\n.footer-social {\n  flex: 1 1 200px;\n  margin: 0.5rem;\n}\n\n.footer-title {\n  font-size: 1.2rem;\n  margin-bottom: 0.5rem;\n}\n\n.footer-nav ul,\n.social-list {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.footer-nav a,\n.footer-contact a,\n.social-list a {\n  color: var(--footer-link);\n  text-decoration: none;\n}\n\n.footer-nav a:hover,\n.footer-contact a:hover,\n.social-list a:hover {\n  color: var(--footer-link-hover);\n}\n\n.social-list {\n  display: flex;\n  gap: 0.5rem;\n}\n\n.social-list a {\n  display: inline-block;\n  width: 2rem;\n  height: 2rem;\n  line-height: 2rem;\n  text-align: center;\n  background: var(--footer-link);\n  border-radius: 50%;\n  color: var(--footer-bg);\n  font-weight: bold;\n}\n\n.footer-bottom {\n  text-align: center;\n  margin-top: 1rem;\n  font-size: 0.9rem;\n  border-top: 1px solid rgba(255, 255, 255, 0.2);\n  padding-top: 0.5rem;\n}\n\n@media (max-width: 600px) {\n  .footer-container {\n    flex-direction: column;\n    align-items: center;\n  }\n  .footer-nav,\n  .footer-contact,\n  .footer-social {\n    margin: 1rem 0;\n  }\n}"
+  }
+]
