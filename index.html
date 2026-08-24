@@ -1,66 +1,87 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Website</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1H6V9K/6U5K5e2e5Z6p6Y5V9K5V9K5V9K5V9K5V9K5" crossorigin="anonymous">
-    <style>
-        /* Custom tweaks for the navbar */
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-        .nav-link {
-            margin-right: 1rem;
-        }
-        @media (max-width: 576px) {
-            .nav-link {
-                margin-right: 0;
-                margin-top: 0.5rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Premium Navbar</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary-color: #0A0A0A;
+  --accent-color: #FF6F61;
+  --bg-color: #FFFFFF;
+  --nav-height: 80px;
+  --transition: 0.3s ease;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Roboto', sans-serif; background: var(--bg-color); }
+nav {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: var(--primary-color);
+  color: #fff;
+}
+nav .logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+nav .nav-links {
+  list-style:none;
+  display:flex;
+  gap:2rem;
+}
+nav .nav-links a {
+  position:relative;
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+  transition: var(--transition);
+}
+nav .nav-links a::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background: var(--accent-color);
+  transition: width var(--transition);
+}
+nav .nav-links a:hover::after {
+  width:100%;
+}
+nav .cta {
+  background: var(--accent-color);
+  color:#fff;
+  border:none;
+  padding:0.6rem 1.4rem;
+  border-radius:4px;
+  font-family:'Poppins',sans-serif;
+  font-weight:600;
+  cursor:pointer;
+  transition: background var(--transition);
+}
+nav .cta:hover {
+  background:#e65b50;
+}
+nav:hover {
+  background: #111;
+}
+</style>
 </head>
 <body>
-    <!-- Responsive Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Main navigation">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">University</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#departments">Departments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#admissions">Admissions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Placeholder content -->
-    <main class="container mt-5">
-        <h1>Welcome to the University</h1>
-        <p>This is a placeholder page. Replace with actual content.</p>
-    </main>
-
-    <!-- Bootstrap 5 JS Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+6Z5Y5V9K5V9K5V9K5V9K5V9K5V9K5" crossorigin="anonymous"></script>
+<nav>
+  <div class="logo">Brand</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <button class="cta">Get Started</button>
+</nav>
 </body>
 </html>
